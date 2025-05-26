@@ -1,7 +1,8 @@
 
 # Playwright
 node_modules/
-src/test/reports
+src/reports
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+state.json
