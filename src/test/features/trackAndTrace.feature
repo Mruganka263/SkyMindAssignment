@@ -1,9 +1,8 @@
 Feature: Tests for Track & Trace  - Shipments
+#   Background:
+#     Given User is able to successfully login to the application
 
-  Background:
-    Given User is able to successfully login to the application
-
-@TC_003
+  @TC_003
   Scenario: Verify filtering on Shipments Table View page
     Given Open "Shipments in Table View" under Track & Trace
     And Reset the filter if applicable
