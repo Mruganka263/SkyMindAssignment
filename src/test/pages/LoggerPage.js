@@ -23,12 +23,12 @@ class LoggerPage {
             await this.page.waitForResponse(response =>
                 response.url().includes('/users/preferences/filter') && response.status() === 200
             );
-            console.log("\nFilter Type: "+filterType+" Filtered By: "+filterName);
+            console.log("\nFilter Type: " + filterType + " Filtered By: " + filterName);
             let recordCount = await this.pairingStatusValues.count();
-            console.log("Total Record: "+recordCount);
+            console.log("Total Record: " + recordCount);
             for (let i = 0; i < recordCount; i++) {
-                let text= await this.pairingStatusValues.nth(i).textContent();
-                console.log("Compare with the Table Record: "+text);
+                let text = await this.pairingStatusValues.nth(i).textContent();
+                console.log("Compare with the Table Record: " + text);
                 await expect(this.pairingStatusValues.nth(i)).toHaveText(filterName);
             }
         }

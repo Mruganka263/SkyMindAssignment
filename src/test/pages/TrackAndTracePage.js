@@ -17,7 +17,7 @@ class TrackAndTracePage {
     }
 
     async removeFilter(filterName) {
-        let checkbox = this.menuListItem.filter({ hasText: filterName }).locator("[type='checkbox']");
+        let checkbox = this.menuListItem.filter({ has: this.page.locator(':text-is("' + filterName + '")') }).locator("[type='checkbox']");
         if (await checkbox.isChecked())
             await checkbox.click();
     }
@@ -38,8 +38,8 @@ class TrackAndTracePage {
         }
     }
 
-    async resetFilter(){
-        if(await this.clearFilter.isEnabled()){
+    async resetFilter() {
+        if (await this.clearFilter.isEnabled()) {
             await this.clearFilter.click();
         }
     }
