@@ -13,6 +13,5 @@ Given('Open {string} under Track & Trace', async function (webPage) {
 });
 
 Given('Reset the filter if applicable', async function () {
-    await this.page.pause();
     await this.pageObj.resetFilter();
 });

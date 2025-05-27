@@ -15,8 +15,7 @@ Given('Open {string} under Asset Management', async function (webPage) {
     }
 });
 
-Then('Verify whether table results are filtered based on {string} as {string}', async function (filterType,filterName) {
-    // await this.page.pause(); 
-    await this.pageObj.verifyTableResultBasedOnFilter(filterType,filterName);
+Then('Verify whether table results are filtered based on {string} as {string}', async function (filterType, filterName) {
+    await this.pageObj.verifyTableResultBasedOnFilter(filterType, filterName);
 });
 
